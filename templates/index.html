@@ -3,40 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Interface</title>
+    <title>Welcome to Your Awesome App</title>
     <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
+            overflow: hidden;
         }
+
+        /* Container styling */
         .container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
+
+        /* Heading styles */
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #f39c12;
         }
-        p {
-            font-size: 1.2em;
+
+        /* Subheading styles */
+        p.lead {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ffffff;
+            background: #e74c3c;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #c0392b;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Awesome Interface!</h1>
-        <p>This application is running on OCI and deployed with OKE.</p>
-        <p>Feel free to explore and enjoy the sleek design.</p>
+        <h1>Welcome to Your Awesome App!</h1>
+        <p class="lead">This is your newly deployed application, showcasing a sleek and engaging interface on OCI using OKE.</p>
+        <a href="#" class="button">Explore More</a>
+        <div class="footer">Powered by OCI & OKE | Designed with ❤️</div>
     </div>
 </body>
 </html>
