@@ -13,17 +13,32 @@
         }
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #3498db, #8e44ad);
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             overflow: hidden;
+            background: url('https://source.unsplash.com/random/1920x1080?technology') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        /* Container styling */
+        /* Overlay for readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Main container */
         .container {
+            position: relative;
+            z-index: 2;
             max-width: 800px;
             text-align: center;
             padding: 40px;
@@ -33,14 +48,12 @@
             backdrop-filter: blur(10px);
         }
 
-        /* Heading styles */
+        /* Heading and content styles */
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
             color: #f39c12;
         }
-
-        /* Subheading styles */
         p.lead {
             font-size: 1.3em;
             margin-bottom: 20px;
